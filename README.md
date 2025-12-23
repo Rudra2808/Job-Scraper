@@ -1,7 +1,7 @@
 # Job Aggregation Tool (Python + Selenium/BS4)
 
 ## 📌 Project Overview
-This tool is a **Job Scraper System** designed to scrape, normalize, and combine job listings from multiple job portals into a single structured dataset. It was developed as part of the **Coding Logical Test (2nd Interview Round)**.
+This tool is a **Job Scraping System** designed to scrape, normalize, and combine job listings from multiple job portals into a single structured dataset. It was developed as part of the **Coding Logical Test (2nd Interview Round)**.
 
 The tool currently supports scraping from:
 1.  **Talent.com** (Assigned Portal)
@@ -40,23 +40,48 @@ job_scraper/
 ## 🚀 How to Run the Project
 
 ### 1. Prerequisites
-Ensure you have Python installed. You also need the Chrome browser installed for Selenium.
+Ensure you have Python (3.8 or higher) installed on your system. You also need the Google Chrome browser installed, as Selenium uses it for automation.
 
-### 2. Install Dependencies
-Open your terminal/command prompt and run:
+### 2. Set Up a Virtual Environment (Recommended)
+It is best practice to run this project in a virtual environment to avoid conflicts.
+
+**For Windows:**
+
+```bash
+# Create the environment
+python -m venv venv
+
+# Activate the environment
+.\venv\Scripts\activate
+```
+
+**For macOS / Linux:**
+
+```bash
+# Create the environment
+python3 -m venv venv
+
+# Activate the environment
+source venv/bin/activate
+```
+
+You will know it is activated when you see `(venv)` at the start of your terminal line.
+
+### 3. Install Dependencies
+Once the environment is active, install the required libraries:
 
 ```bash
 pip install selenium beautifulsoup4 streamlit pandas openpyxl requests
 ```
 
-### 3. Run the Application
+### 4. Run the Application
 Execute the main.py file using Streamlit:
 
 ```bash
 streamlit run main.py
 ```
 
-### 4. Usage
+### 5. Usage
 A web interface will open in your browser (usually at http://localhost:8501).
 
 1. **Select Job Role:** Choose from the dropdown (e.g., "Python Developer") or type a custom role.
@@ -127,9 +152,4 @@ The tool generates a structured JSON file (e.g., `merged_jobs_20251223.json`):
 * **Frontend UI:** Built a fully interactive dashboard using Streamlit.
 * **Excel Export:** Used Pandas to allow users to download clean .xlsx reports.
 * **Deep Scraping:** The tool doesn't just grab the list; it visits every job link to extract full descriptions and skills.
-
----
-
-## 📜 Disclaimer
-This tool is developed for educational and testing purposes only. Please respect the robots.txt and Terms of Service of the respective websites when using web scrapers.
 

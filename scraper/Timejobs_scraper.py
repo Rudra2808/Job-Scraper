@@ -20,7 +20,7 @@ import sys
 def get_driver():
     """Initialize Chrome WebDriver with optimized settings"""
     options = Options()
-    # options.add_argument('--headless')  # Uncomment for background mode
+    options.add_argument('--headless')  
     options.add_argument('--disable-gpu')
     options.add_argument('--window-size=1920,1080')
     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36")
@@ -303,9 +303,6 @@ def extract_salary_from_detail(soup):
     """
     Extract salary (e.g. '10-12 LPA', 'Not Disclosed by Recruiter').
     """
-    print(soup.find_all("p")[1].get_text(strip=True))
-    print(soup.find_all("p")[2].get_text(strip=True))
-    print(soup.find_all("p")[3].get_text(strip=True))
     spans = soup.find_all("span", class_="mr-2 inline flex items-center")
     if len(spans) >= 3:
         return spans[2].get_text(" ", strip=True)
