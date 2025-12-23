@@ -153,8 +153,3 @@ The tool generates a structured JSON file (e.g., `merged_jobs_20251223.json`):
 * **Excel Export:** Used Pandas to allow users to download clean .xlsx reports.
 * **Deep Scraping:** The tool doesn't just grab the list; it visits every job link to extract full descriptions and skills.
 
----
-
-## 📜 Disclaimer
-This tool is developed for educational and testing purposes only. Please respect the robots.txt and Terms of Service of the respective websites when using web scrapers.
-
